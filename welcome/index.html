@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Authentication Page</title>
+  <style>
+    /* Global Styles */
+    body {
+      margin: 0;
+      padding: 0;
+      background-image: url("../keys-compass.png");
+      background-repeat: no-repeat;
+      background-attachment: scroll;
+      background-size: cover;
+      background-color: black;
+      color: antiquewhite;
+      font-family: 'Times New Roman', Times, serif;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    /* Style for the submit button */
+    #authForm {
+      text-align: center;
+    }
+    #authForm button {
+      background-color: #cf6f40;
+      border: none;
+      color: white;
+      padding: 8px;
+      width: 100%;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    #authForm button:hover {
+      background-color: #af5f30;
+    }
+  </style>
+  <!-- Include MD5 library from CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/blueimp-md5/2.19.0/js/md5.min.js"></script>
+  <script>
+    // Replace with your actual MD5 hash
+    const correctHash = '7d57d3c8352792e41d40c4faea49ba23';
+
+    function authenticate() {
+      const passwordInput = document.getElementById('password');
+      const password = passwordInput.value;
+      const passwordHash = md5(password);
+      const errorDiv = document.getElementById('error');
+
+      if (passwordHash === correctHash) {
+        // Redirect on successful authentication
+        window.location.href = '../warriorpoet/index.html';
+      } else {
+        // Show error message
+        errorDiv.style.display = 'block';
+        errorDiv.textContent = 'Incorrect password. Please try again.';
+        // Clear password field and focus
+        passwordInput.value = '';
+        passwordInput.focus();
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      document.getElementById('password').focus();
+      document.getElementById('authForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        authenticate();
+      });
+    });
+  </script>
+</head>
+<body>
+  <div style="max-width: 300px; margin: 100px auto; text-align: center;">
+    <h2>Please enter the password</h2>
+    <form id="authForm">
+      <input type="password" id="password" placeholder="Password" required style="width: 100%; padding: 8px; margin-bottom: 10px;">
+      <button type="submit" style="margin-left: 8px; padding: 8px;">Submit</button>
+    </form>
+    <div id="error" style="color: red; margin-top: 10px; display: none;"></div>
+  </div>
+</body>
+</html>
+

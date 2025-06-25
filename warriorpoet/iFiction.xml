@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ifindex version="1.0" xmlns="http://babel.ifarchive.org/protocol/iFiction/">
+    <story>
+        <identification>
+            <ifid>599DC550-4E02-4F60-85F1-118DF48EA928</ifid>
+            <format>glulx</format>
+        </identification>
+        <bibliographic>
+            <title>WARRIOR POET OF MOURDRASCUS, Part 1: The City of Dol Bannath</title>
+            <author>Charles M Ball</author>
+            <headline>A text-based fantasy adventure game</headline>
+            <genre>Fantasy</genre>
+            <firstpublished>2024</firstpublished>
+            <description>You've spent four years of study in the Department of Poetry and War, at the prestigious University of Mourdrascus. It's time for you to graduate and begin your career of adventure as a true Warrior Poet, but there is a complication...</description>
+            <language>en</language>
+            <group>Inform</group>
+        </bibliographic>
+        <resources>
+            <auxiliary>
+                <leafname>dol_bannath_map.pdf</leafname>
+                <description>Interesting Locations in Dol Bannath</description>
+            </auxiliary>
+        </resources>
+        <cover>
+            <format>jpg</format>
+            <height>680</height>
+            <width>680</width>
+            <description>A warrior poet posing in the marketplace</description>
+        </cover>
+        <releases>
+            <attached>
+                <release>
+                    <releasedate>2025-06-24</releasedate>
+                    <version>1</version>
+                    <compiler>Inform 7</compiler>
+                    <compilerversion>Inform 10.1.2 (build )</compilerversion>
+                </release>
+            </attached>
+        </releases>
+        <colophon>
+            <generator>Inform 7</generator>
+            <generatorversion>Inform 10.1.2 (build )</generatorversion>
+            <originated>2025-06-24</originated>
+        </colophon>
+        <glulx>
+            <serial>250624</serial>
+            <release>1</release>
+            <compiler>Inform Inform 10.1.2 (build )</compiler>
+            <coverpicture>1</coverpicture>
+        </glulx>
+    </story>
+</ifindex>
