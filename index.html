@@ -9,14 +9,11 @@
         body {
             margin: 0;
             padding: 0;
-	    #background-color: darkgoldenrod;
-            #background-color: #784616;
-            #background-image: url("books-lamp.png");
+	    background-color: #23160e;
             background-image: url("keys-compass.png");
             background-repeat: no-repeat;
             background-attachment: scroll;
             background-size: cover;
-            background-color: black;
             color: antiquewhite;
             font-family: 'Times New Roman', Times, serif;
             #display: flex;
@@ -33,15 +30,15 @@
         /* Author Name */
         .author-name {
             font-size: 4em;
-            font-weight: 800;
+            font-weight: bold;
             margin-top: 50px;
             margin-bottom: 10px;
         }
 
         /* Author Title */
         .author-title {
-            font-size: 2em;
-            font-weight: 400;
+            font-size: 1em;
+	    font-family: Verdana, Arial, sans-serif;
             margin-bottom: 40px;
         }
 
@@ -66,12 +63,32 @@
         .nav-links {
             font-family: Verdana, Arial, sans-serif;
             font-weight: normal;
+	    margin-left: auto;
+	    margin-right: auto;
+	    margin-bottom: 40px;
+	    width: 450px;
         }
 
         .nav-links a {
             margin: 0 15px;
             text-decoration: none;
-            color: antiquewhite;
+            color: lightgoldenrodyellow;
+            font-size: 1em;
+        }
+
+	.works-desc {
+	    font-size: .8em;
+	}
+
+	.works-blurb {
+	    font-size: .8em;
+	    font-style: italic;
+	}
+
+        .works-desc a {
+            margin: 0 0;
+            text-decoration: none;
+            color: lightgoldenrodyellow;
             font-size: 1em;
         }
 
@@ -82,16 +99,29 @@
 </head>
 <body>
     <div class="container">
-        <!-- Author Name -->
         <div class="author-name">Charles M. Ball</div>
-        <div class="author-title">Author</div>
+        <div class="author-title">AUTHOR AND DESIGNER OF INTERACTIVE EXPERIENCES</div>
 
-        <!-- Placeholder Links for Subpages -->
 	<div class="nav-heading">
             <p>Featured Works:</p>
 	</div>
         <div class="nav-links">
-            <a href="welcome/index.html">WARRIOR POET OF MOURDRASCUS</a><br />a text-based adventure game
+            <a href="https://ifdb.org/viewgame?id=65ncc75met13ha0l">WARRIOR POET OF MOURDRASCUS, Part I: The City of Dol Bannath</a>
+	    <p class="works-desc">
+	    A text-based adventure game available from IFDB, written for <a href="https://ifcomp.org">IFCOMP 2025</a>.
+	    </p>
+	    <p class="works-blurb">
+	    You've spent four years of study in the Department of Poetry and War, at the prestigious University of Mourdrascus. It's time for you to graduate and begin your career of adventure as a true Warrior Poet, but there is a complication...
+	    </p>
+        </div>
+        <div class="nav-links">
+            <a href="https://charlesmball.itch.io/the-idle-demon">THE IDLE DEMON</a>
+	    <p class="works-desc">
+	    An interactive fiction horror game, written in under four hours for <a href="https://itch.io/jam/ectocomp-2025">ECTOCOMP 2025</a>.
+	    </p>
+	    <p class="works-blurb">
+	    You wake up on the couch in your garage after a wild Halloween party.  But you can't remember why you didn't go to sleep with your wife, in your own bed.  In fact, you can't remember anything after a certain point last night.  But either way, it's time to go to work -- even if you can't seem to shake the voice inside your head...
+	    </p>
         </div>
     </div>
 </body>
